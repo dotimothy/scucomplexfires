@@ -1,2 +1,3 @@
 # scucomplexfires
-A Clean, Lightweight Website to provide essential information and links about the SCU Lightning Complex Fires
+
+A clean and lightweight website to provide essential information, resources, and links about the SCU Lightning Complex Fires.
