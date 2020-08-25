@@ -1,51 +1,104 @@
 <!DOCTYPE html>
-<!--Contributors-->
-<!--Timothy Do-->
-<!--Bennett Nguyen-->
-<!--Wilson Nguyen-->
-
-<html>
+<html lang="en">
 
 <head>
     <title>SCU Lightning Complex Fire Resources</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Facebook Meta Tags-->
+    <!-- Default Meta Tags -->
+    <meta name="description" content="Providing essential information about the SCU Lightning Complex Fires">
+    <meta name="author" content="Timothy Do, Bennet Nguyen, Wilson Nguyen">    
+
+    <!-- Facebook Meta Tags -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="SCU Lightning Complex Fire Resources">
     <meta property="og:url" content="https://scucomplexfires.com">
     <meta property="og:image" content="https://scucomplexfires.com/scu.jpg">
     <meta property="og:description" content="Providing essential information about the SCU Lightning Complex Fires">
 
-    <!--Twitter Meta Tags-->
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SCU Lightning Complex Fire Resources">
-    <meta name="twitter:url" content="https://scucomplexfires.com">
-    <meta name="twitter:description" content="Providing essential information about the SCU Lightning Complex Fires">
-    <meta name="twitter:image" content="https://scucomplexfires.com/scu.jpg">
-
     <style>
+        body {
+            transition: background-color 0.5s;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        :root[light] body {
+            background-color: white;
+        }
+
         * {
             font-family: Arial;
+            color: white;
         }
+
+        :root[light] * {
+            color: black;
+        }
+
         a {
-          color: blue;
+          color: #ffaf00;
           transition: color 0.3s;
           font-size: 1.25em;
           display: block;
           margin: 0.85em;
         }
+
         a:hover {
-          color: rgba(0,0,255,0.33);
+          color: #ff2300;
+        }
+
+        :root[light] a {
+            color: blue;
+        }
+
+        :root[light] a:hover {
+            color: rgba(0, 0, 255, 0.33);
+        }
+
+        #toggle-theme {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            width: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0px 0px 6px white;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-theme:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        :root[light] #toggle-theme {
+            background-color: white;
+            box-shadow: 0px 0px 6px black;
+        }
+
+        :root[light] #toggle-theme:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.5em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: grey;
         }
     </style>   
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <h1>SCU Lightning Complex Fire Resources</h1>
+    <h1 style="padding-right: 1.5em">SCU Lightning Complex Fire Resources</h1>
 
-    <a href="https://goo.gl/maps/KD3zvb3p5XiMoXFP7" target="_blank"><h2 style="font-weight:lighter">Hour By Hour Tracking Via Google Maps</h2></a>
+    <h2 style="font-weight:lighter"><a href="https://goo.gl/maps/KD3zvb3p5XiMoXFP7" target="_blank">Hour By Hour Tracking Via Google Maps</a></h2>
 
     <h2>👩‍🚒 Official CAL FIRE Info:</h2>
 
@@ -63,7 +116,7 @@
 
     <a href="https://www.instagram.com/calfire_scu/" target="_blank">SCU CAL FIRE Instagram</a>
 
-    <h2>⛑️ Aid for the Affected</h2>
+    <h2>⛑️ Aid for the Affected:</h2>
 
     <a href="https://www.airbnb.com/openhomes/disaster-relief/norcalfires2020" target ="_blank">Free Airbnb Housing</a>
 
@@ -98,7 +151,20 @@
     <a href="http://www.alertwildfire.org/southeastbay/index.html" target="_blank">ALERTWildfire</a>
 
     <a href="/hamcam.html" target="_blank">Hamcams from Lick Observatory</a>
-
+    <div id="toggle-theme">☀️</div>
+    <script>
+        (function(){
+            const t = document.querySelector('#toggle-theme');
+            let light;
+            t.onclick = () => {
+                document.querySelector('html').toggleAttribute('light');
+                light = !light;
+                t.innerText = light ? '🌙' : '☀️';
+                localStorage.setItem('light-theme', light)
+            }
+            if (JSON.parse(localStorage.getItem('light-theme', light))) t.click();
+        }());
+    </script>
 </body>
 
 </html>
