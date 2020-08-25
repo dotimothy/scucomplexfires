@@ -1,42 +1,74 @@
 <!DOCTYPE html>
-<!--Contributors-->
-<!--Timothy Do-->
-<!--Bennett Nguyen-->
-<!--Wilson Nguyen-->
-
-<html>
+<html lang="en">
 
 <head>
     <title>SCU Lightning Complex Fire Resources</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Facebook Meta Tags-->
+    <!-- Default Meta Tags -->
+    <meta name="description" content="Providing essential information about the SCU Lightning Complex Fires">
+    <meta name="author" content="Timothy Do, Bennet Nguyen, Wilson Nguyen">    
+
+    <!-- Facebook Meta Tags -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="SCU Lightning Complex Fire Resources">
     <meta property="og:url" content="https://scucomplexfires.com">
     <meta property="og:image" content="https://scucomplexfires.com/scu.jpg">
     <meta property="og:description" content="Providing essential information about the SCU Lightning Complex Fires">
 
-    <!--Twitter Meta Tags-->
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SCU Lightning Complex Fire Resources">
-    <meta name="twitter:url" content="https://scucomplexfires.com">
-    <meta name="twitter:description" content="Providing essential information about the SCU Lightning Complex Fires">
-    <meta name="twitter:image" content="https://scucomplexfires.com/scu.jpg">
-
     <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
         * {
             font-family: Arial;
+            color: white;
         }
         a {
-          color: blue;
+          color: #ffaf00;
           transition: color 0.3s;
           font-size: 1.25em;
           display: block;
           margin: 0.85em;
         }
         a:hover {
-          color: rgba(0,0,255,0.33);
+          color: #ff2300;
+        }
+        @keyframes fade {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }        
+        #flame-container, #flame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fade 2s forwards;
+        }
+        #flame-container {
+            width: 100%;
+            height: 100%;
+        }
+        #flame {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10em;
+            pointer-events: none;    
+        }
+        ::-webkit-scrollbar {
+            width: 0.5em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cc6700;
         }
     </style>   
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -45,7 +77,7 @@
 <body>
     <h1>SCU Lightning Complex Fire Resources</h1>
 
-    <a href="https://goo.gl/maps/KD3zvb3p5XiMoXFP7" target="_blank"><h2 style="font-weight:lighter">Hour By Hour Tracking Via Google Maps</h2></a>
+    <h2 style="font-weight:lighter"><a href="https://goo.gl/maps/KD3zvb3p5XiMoXFP7" target="_blank">Hour By Hour Tracking Via Google Maps</a></h2>
 
     <h2>👩‍🚒 Official CAL FIRE Info:</h2>
 
@@ -63,7 +95,7 @@
 
     <a href="https://www.instagram.com/calfire_scu/" target="_blank">SCU CAL FIRE Instagram</a>
 
-    <h2>⛑️ Aid for the Affected</h2>
+    <h2>⛑️ Aid for the Affected:</h2>
 
     <a href="https://www.airbnb.com/openhomes/disaster-relief/norcalfires2020" target ="_blank">Free Airbnb Housing</a>
 
@@ -98,7 +130,9 @@
     <a href="http://www.alertwildfire.org/southeastbay/index.html" target="_blank">ALERTWildfire</a>
 
     <a href="/hamcam.html" target="_blank">Hamcams from Lick Observatory</a>
-
+    <div id="flame-container">
+        <div id="flame">🔥</div>
+    </div>
 </body>
 
 </html>
