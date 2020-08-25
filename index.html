@@ -8,7 +8,7 @@
 
     <!-- Default Meta Tags -->
     <meta name="description" content="Providing essential information about the SCU Lightning Complex Fires">
-    <meta name="author" content="Timothy Do, Bennet Nguyen, Wilson Nguyen">
+    <meta name="author" content="Timothy Do, Bennet Nguyen, Wilson Nguyen, Jason Vu">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -91,6 +91,9 @@
         ::-webkit-scrollbar-thumb {
             background-color: grey;
         }
+        footer {
+            margin-top: 6em;
+        }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -152,8 +155,12 @@
 
     <a href="http://www.alertwildfire.org/southeastbay/index.html" target="_blank">ALERTWildfire</a>
 
-    <a href="/hamcam.html" target="_blank">Hamcams from Lick Observatory</a>
+    <a href="/hamcam" target="_blank">Hamcams from Lick Observatory</a>
     <div id="toggle-theme">☀️</div>
+    <footer>
+        <a href="https://github.com/dotimothy/scucomplexfires" target="_blank"><h3>Made with 💕</h3></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScuUfADo-Y8makg9IE0udI5-cmJx-buTwHzIlf-iRILKs2uKw/viewform" target="_blank"><h4>Give Us Feedback!</h4></a>
+    </footer>
     <script>
         (function(){
             const t = document.querySelector('#toggle-theme');
@@ -167,11 +174,6 @@
             if (JSON.parse(localStorage.getItem('light-theme', light))) t.click();
         }());
     </script>
-    <br>
-    <footer style="margin-top: 5em">
-      <a href="https://github.com/dotimothy/scucomplexfires" target="_blank"><h3>Made with 💕</h3></a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScuUfADo-Y8makg9IE0udI5-cmJx-buTwHzIlf-iRILKs2uKw/viewform" target="_blank"><h4>Give Us Feedback!</h4></a>
-    </footer>
 </body>
 
 
