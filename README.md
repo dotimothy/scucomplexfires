@@ -5,6 +5,6 @@ A clean and lightweight website to provide essential information, resources, and
 To all who are currently affected by the SCU Lightning Complex fire: stay safe!
 
 Made by:
-Timothy Do (dotimothy), Bennett Nguyen (bennettnguyen), Wilson Nguyen (PotatoParser), & Jason Vu (jasonanhvu)
+Timothy Do (dotimothy), Bennett Nguyen (bennettnguyen), Wilson Nguyen (PotatoParser), & Jason Vu (javab3ans)
 
 ![](scu.jpg)
